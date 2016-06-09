@@ -36,7 +36,7 @@ You have 40 moves to reach the star gate and to gain as much points as possible(
   1. 0 - star gate
   2. @ - obstacle
   3. > or < or ^ represents your last movement and direction you're heading into
-  4. * - representing walls of the missiong, you can reach them but you can't cross over them
+  4. * - representing walls(boundaries) of the mission, you can reach them but you can't cross over them
 ```
 
 ## Weapons
@@ -50,4 +50,5 @@ You have 40 moves to reach the star gate and to gain as much points as possible(
 ```
 1. When player moves down, 'symbol' is >
 2. Implement another mission
+3. Some effect when weapon fires
 ```
