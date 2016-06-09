@@ -22,7 +22,7 @@ public class ResqueFromTheMinesMission extends Mission{
 
 	@Override
 	public void setObstacles() {
-		for (int i=0; i<=5; i++){
+		for (int i=0; i<=8; i++){
 			this.obstacles.add(new int[]{random.nextInt(25),random.nextInt(5)});
 		}
 	}
