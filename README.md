@@ -11,14 +11,15 @@ Script is going to compile the classes, pack a JAR and run it. Please make sure 
 ```
 LaserSquad is CLI game, with simple idea.  
 
-You are part of a mission where goal is to reach the star gate. On the map looks for star gate described as 'O'.
+You are part of a mission where goal is to reach the star gate while earning as much as possible(by crushing obstacles).
+On the map looks for star gate described as 'O'.
 
 You can move left/up/right/down and along the way there are obstacles. YOu can't leave the maze.
 
 You can fire towards obstacles using weapon you selected. Each weapon have different range and some of them are direction dependand(for example if your last move was going to the right, then shooting from sniper rifle it will have effect only on the right side of x-axis).
 When you destroy one obstacle you gain 1 point.
 
-You have 30 moves to reach the star gate and to gain as much points as possible(by crushing obstacles)
+You have 40 moves to reach the star gate and to gain as much points as possible(by crushing obstacles)
 ```
 
 ## Commands
