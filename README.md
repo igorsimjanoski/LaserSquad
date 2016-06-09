@@ -45,4 +45,8 @@ You have 30 moves to reach the star gate and to gain as much points as possible(
 3. A75 grenade - direction not dependant, range=5 (it can reach obstacle 5 points longer in any x/y direction)
 ```
 
-
+## Known Issues/ TODO
+```
+1. When player moves down, 'symbol' is >
+2. Implement another mission
+```
