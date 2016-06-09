@@ -6,6 +6,12 @@ import java.util.List;
 
 import com.game.model.Position;
 
+/**
+ * Represents mission(level). Instances that extends this class can set obstacles and enemies
+ * 
+ * @author igor
+ *
+ */
 public abstract class Mission implements Serializable{
 	
 	private String missionName;
@@ -18,6 +24,9 @@ public abstract class Mission implements Serializable{
 	protected List<int[]> obstacles = new ArrayList<int[]>();
 	protected List<int[]> enemies = new ArrayList<int[]>();
 	
+	public abstract void setObstacles();
+	public abstract void setEnemies();
+
 	public Mission(int[] x1, int[]x2, int[] y1, int[] y2, String missionName){
 		this.x1 = x1;
 		this.x2 = x2;
@@ -25,9 +34,6 @@ public abstract class Mission implements Serializable{
 		this.y2 = y2;
 		this.missionName = missionName;
 	}
-	
-	public abstract void setObstacles();
-	public abstract void setEnemies();
 	
 	public boolean pathUpClean(Position position){
 		boolean pathClean = false;
@@ -95,7 +101,7 @@ public abstract class Mission implements Serializable{
 				}
 			}
 		} catch (Exception e) {
-			// TODO: handle exception
+			System.out.println(e);
 		}
 		return hasObstacle;
 	}

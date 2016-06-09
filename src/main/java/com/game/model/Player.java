@@ -4,16 +4,34 @@ import java.io.Serializable;
 
 import com.game.mission.Mission;
 
+/**
+ * Represent player. Defines energy, points, weapon and current position in the game
+ * 
+ * @author igor
+ *
+ */
 public class Player implements Serializable{
 	
 	private Position position = new Position(0,0);
 	
+	/**
+	 * Direction, keep last movement of the player
+	 */
 	private int[] direction = {0,0,1,0}; // left,up,right,down
 	
+	/**
+	 * energy left
+	 */
 	private int energy = 20;
 	
+	/**
+	 * points earned
+	 */
 	private int points = 0;
 
+	/**
+	 * weapon
+	 */
 	private Weapon weapon;
 	
 	/**

@@ -2,6 +2,12 @@ package com.game.model;
 
 import java.io.Serializable;
 
+/**
+ * Coordinates in the mission
+ * 
+ * @author igor
+ *
+ */
 public class Position implements Serializable{
 	
 	private int x;

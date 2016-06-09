@@ -5,6 +5,11 @@ import java.util.Random;
 import com.game.model.Position;
 import com.game.utils.Utils;
 
+/**
+ * 
+ * @author igor
+ *
+ */
 public class ResqueFromTheMinesMission extends Mission{
 
 	Random random = new Random();
@@ -25,6 +30,5 @@ public class ResqueFromTheMinesMission extends Mission{
 	@Override
 	public void setEnemies() {
 	}
-
 
 }

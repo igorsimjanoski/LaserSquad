@@ -3,14 +3,19 @@ package com.game.engine;
 import java.io.Console;
 import java.util.Scanner;
 
+/**
+ * Console reader/writer
+ * 
+ * @author igor
+ *
+ */
 public class CLIEngine implements GameEngine {
 	
-	private Console console = System.console();
-	Scanner scanner = new Scanner(System.in);
-	//TODO use factory pattern to get out
 	@Override
 	public String in() {
+		Console console = System.console();
 		if (console == null){
+			Scanner scanner = new Scanner(System.in);
 			return scanner.nextLine();
 		}else{
 			return console.readLine();

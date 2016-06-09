@@ -121,7 +121,6 @@ public class Game implements Serializable{
 		
 		for(int h=height; h>=0; h--){
 			for (int i=0;i<=width;i++){
-				
 				//check if this coordinate is obstacle
 				//check if this coordinate is current player position
 				//TODO: other? enemies? energy?

@@ -13,6 +13,12 @@ import com.game.model.SniperRifle;
 import com.game.model.Weapon;
 import com.game.utils.SerializerHelper;
 
+/**
+ * Main class, starts cli game and interact w/ user
+ * 
+ * @author igor
+ *
+ */
 public class Main {
 
 	/**
@@ -31,9 +37,7 @@ public class Main {
 			if (option.equals("1")){
 				cliEngine.out("New game chosen");
 				game = new Game();
-				//TODO build a character and pick up a mission(only for new game)
 				while (true){
-					cliEngine.out("Let's build a character");
 					cliEngine.out("Pick up a weapon, available options:");
 					cliEngine.out("1. Rocket Launcher");
 					cliEngine.out("2. Sniper Rifle");
@@ -50,31 +54,37 @@ public class Main {
 						weapon = new A75();
 						break;
 					default:
+						cliEngine.out("Invalid option!");
+					}
+					if (weapon != null){
 						break;
 					}
-					break;
 				}
 				
 				
 				while (true){
 					cliEngine.out("Pick up a mission:");
 					cliEngine.out("1. Resque From the mines");
-					cliEngine.out("2. Cyber hordes");
+					//cliEngine.out("2. Cyber hordes");
 					
 					String missionInput = cliEngine.in();
 					
 					if(missionInput.equals("1")){
 						mission = new ResqueFromTheMinesMission();
-					}else if (missionInput.equals("2")){
-						//Mission mission = new CyberHordesMission();
+					}else{
+						cliEngine.out("Invalid option!");
 					}
-					break;
+					//else if (missionInput.equals("2")){
+						//Mission mission = new CyberHordesMission();
+					//}
+					if (mission != null){
+						break;
+					}
 				}
 				
 				Player player = new Player();
 				player.setWeapon(weapon);
 				game = new Game(player, mission);
-				
 				break;
 			}else if (option.equals("2")){
 				cliEngine.out("Resume game selected");
@@ -90,14 +100,12 @@ public class Main {
 		}
 		
 		Position currentPosition = game.getPlayer().getPosition();
-		
 		game.drawMission();
 		cliEngine.out("Your current position is at:  " + "(" +currentPosition.getX() + "," + currentPosition.getY() + ")");
 
 		boolean keepPlaying = true;
 		while (keepPlaying){
 			try{
-				//cliEngine.out("What's your next move... punk?");
 				String nextMove = cliEngine.in();
 				
 				if(nextMove.equals("8") || nextMove.equals("4") || nextMove.equals("6") || nextMove.equals("2")){
