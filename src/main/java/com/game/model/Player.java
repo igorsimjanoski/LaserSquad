@@ -22,7 +22,7 @@ public class Player implements Serializable{
 	/**
 	 * energy left
 	 */
-	private int energy = 20;
+	private int energy = 40;
 	
 	/**
 	 * points earned

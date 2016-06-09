@@ -15,15 +15,15 @@ public class ResqueFromTheMinesMission extends Mission{
 	Random random = new Random();
 	
 	public ResqueFromTheMinesMission() {
-		super(new int[]{0,0}, new int[]{15,0}, new int[]{0,5}, new int[]{15,5}, "Resque From The Mines");
+		super(new int[]{0,0}, new int[]{25,0}, new int[]{0,5}, new int[]{25,5}, "Resque From The Mines");
 		setObstacles();
-		starGate = new Position(Utils.randInt(10, 15), Utils.randInt(0, 5));
+		starGate = new Position(Utils.randInt(20, 25), Utils.randInt(0, 5));
 	}
 
 	@Override
 	public void setObstacles() {
-		for (int i=0; i<=2; i++){
-			this.obstacles.add(new int[]{random.nextInt(15),random.nextInt(5)});
+		for (int i=0; i<=5; i++){
+			this.obstacles.add(new int[]{random.nextInt(25),random.nextInt(5)});
 		}
 	}
 
