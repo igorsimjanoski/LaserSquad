@@ -1,6 +1,6 @@
 ## LaserSquad
 CLI based game.
-##How to run: 
+##How to run 
 ```
 Windows users: start_game.bat
 Unix users:start_game.sh
